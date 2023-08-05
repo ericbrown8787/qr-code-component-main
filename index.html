@@ -1,119 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Frontend Mentor | QR code component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | QR code component</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Outfit';
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-      font-family: "Outfit";
-    }
+      body {
+        min-height: 100%;
+        background-color: hsl(212, 45%, 89%);
+      }
 
-    body {
-      min-height: 100%;
-      background-color: hsl(212, 45%, 89%);
-    }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        padding-block: 90px;
+      }
 
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100%;
-      padding-block: 90px;
+      .qr-code-component {
+        padding: 16px;
+        border-radius: 16px;
+        max-width: 300px;
+        background-color: hsl(0, 0%, 100%);
+        text-align: center;
+      }
 
-    }
+      .qr-code {
+        max-width: 100%;
+        border-radius: 12px;
+      }
 
-    .qr-code-component {
-      padding: 16px;
-      border-radius: 16px;
-      max-width: 300px;
-      background-color: hsl(0, 0%, 100%);
-      text-align: center;
-    }
+      .qr-code-text {
+        padding-inline: 12px;
+        padding-block: 18px;
+      }
 
-    .qr-code {
-      max-width: 100%;
-      border-radius: 12px;
-    }
+      .qr-code-text > * {
+        margin-block: 16px;
+      }
 
-    .qr-code-text {
-      padding-inline: 12px;
-      padding-block: 18px;
-    }
+      .qr-code-strong-text {
+        font-size: 20px;
+        color: hsl(218, 44%, 22%);
+      }
 
-    .qr-code-text>* {
-      margin-block: 16px;
-    }
+      .qr-code-main-text {
+        font-size: 15px;
+        color: hsl(220, 15%, 55%);
+      }
 
-    .qr-code-strong-text {
-      font-size: 20px;
-      color: hsl(218, 44%, 22%);
-    }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(218, 44%, 22%);
+      }
 
-    .qr-code-main-text {
-      font-size: 15px;
-      color: hsl(220, 15%, 55%)
-    }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
 
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      color: hsl(218, 44%, 22%);
-    }
+      .attribution a:hover {
+        color: hsl(220, 15%, 55%);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-      text-decoration: none;
-    }
+  <body>
+    <main>
+      <article class="qr-code-component">
+        <section class="qr-code-container">
+          <img
+            src="/images/image-qr-code.png"
+            alt="A QR code"
+            class="qr-code"
+          />
+        </section>
+        <section class="qr-code-text">
+          <strong class="qr-code-strong-text"
+            >Improve your front-end skills by building projects</strong
+          >
 
-    .attribution a:hover {
-      color: hsl(220, 15%, 55%);
-      text-decoration: underline;
-    }
-  </style>
-</head>
+          <p class="qr-code-main-text">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </section>
+      </article>
+    </main>
 
-<body>
-  <main>
-    <article class="qr-code-component">
-      <section class="qr-code-container">
-        <img src="/images/image-qr-code.png" alt="A QR code" class="qr-code">
-      </section>
-      <section class="qr-code-text">
-        <strong class="qr-code-strong-text">Improve your front-end skills by building projects</strong>
-
-        <p class="qr-code-main-text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next
-          level
+    <footer>
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >.
         </p>
-      </section>
-
-    </article>
-
-  </main>
-
-  <footer>
-    <div class="attribution">
-      <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      </p>
-      <p>Coded by <a href="https://github.com/ericbrown8787">Eric Brown</a>.</p>
-
-    </div>
-  </footer>
-
-</body>
-
+        <p>
+          Coded by <a href="https://github.com/ericbrown8787">Eric Brown</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
